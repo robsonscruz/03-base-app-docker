@@ -13,8 +13,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    sh 'rm -rf .git .gitignore Jenkinsfile README.md /app';
-                    sh 'cp -r ./* /app';
+                    sh 'rm -rf .git .gitignore Jenkinsfile README.md /app/*';
+                    sh 'cp -r ./* /app/';
                 }
             }
         }
